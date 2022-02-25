@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<PipelineProject Name="SimpleTriangle">
+	<BufferData GUID="{934F4F59-2122-46CB-B7E0-2A1587B87112}" Name="MyRawVertexBufferData">
+		<BufferDataField Type="Float3" Name="Position" />
+		<BufferDataField Type="Color4" Name="Color" />
+	</BufferData>
+	<CommandAllocator GUID="{50322B2F-8F4B-48F9-9C88-181755D59FB6}" Name="MyCommandAllocator" AllocatorType="D3D12_COMMAND_LIST_TYPE_DIRECT" />
+	<CommandList GUID="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" Name="MyCommandList" CommandAllocator="{50322B2F-8F4B-48F9-9C88-181755D59FB6}" ListType="D3D12_COMMAND_LIST_TYPE_DIRECT" InitialPSO="NULL" />
+	<CommandQueue GUID="{012540FE-34CF-4404-9991-56B07AD2826B}" Name="MyCommandQueue" Flags="0" Type="D3D12_COMMAND_LIST_TYPE_DIRECT" Priority="0" />
+	<DescriptorHeap GUID="{F08175EA-B8C9-4074-9CF3-2BE272B9FB4E}" Name="MyRTVHeap" DescriptorCount="256" HeapType="D3D12_DESCRIPTOR_HEAP_TYPE_RTV" HeapFlags="0" />
+	<Fence GUID="{5AA5E8CF-DA13-4881-A3DB-FB8196826F13}" Name="MyFence" InitialValue="1337" Flags="0" />
+	<InputLayout GUID="{851EF529-B453-4C78-B521-46F9626F9D01}" Name="MyInputLayout" ElementCount="2">
+		<InputElement SemanticName="POSITION" SemanticIndex="0" Format="6" InputSlot="0" AlignedByteOffset="0" InputSlotClass="0" InstanceDataStepRate="0" />
+		<InputElement SemanticName="COLOR" SemanticIndex="0" Format="2" InputSlot="0" AlignedByteOffset="12" InputSlotClass="0" InstanceDataStepRate="0" />
+	</InputLayout>
+	<PipelineStateObject GUID="{51CB08DA-3CFD-47D9-AEEF-7B79A432E521}" Name="MyPSO" UsesRootSignature="true" UsesRootSignature="true" UsesVS="true" UsesPS="true" UsesDS="false" UsesHS="false" UsesGS="false" UsesCS="false" UsesStreamOutput="false" UsesBlendState="true" UsesSampleMask="true" UsesRasterizerState="true" UsesDepthStencilState="true" UsesInputLayout="true" UsesIBStripCutValue="false" UsesPrimitiveTopologyType="true" UsesRTVFormats="true" UsesDSVFormat="false" UsesSampleDesc="true" UsesNodeMask="false" UsesCachedPSO="false" UsesFlags="false" UsesDepthStencilState1="false" UsesViewInstancing="false" UsesAS="false" UsesMS="false" RootSignature="{0E1E8D5D-ED10-42A0-BC34-063018B80D87}" VertexShader="{6FEC0F0F-282B-4ECA-8595-3021DD8B120D}" PixelShader="{42A2EBB1-1D27-4E4F-AFBF-72B10617941A}" DomainShader="NULL" HullShader="NULL" GeometryShader="NULL" ComputeShader="NULL" SampleMask="4294967295" InputLayout="{851EF529-B453-4C78-B521-46F9626F9D01}" IBStripCutValue="0" PrimitiveTopologyType="3" DSVFormat="0" SampleCount="1" SampleQuality="0" NodeMask="0" Flags="0" AmplificationShader="NULL" MeshShader="NULL">
+		<BlendState AlphaToCoverageEnable="0" IndependentBlendEnable="0">
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="2" DestBlend="1" BlendOp="1" SrcBlendAlpha="2" DestBlendAlpha="1" BlendOpAlpha="1" LogicOp="4" RenderTargetWriteMask="15" />
+		</BlendState>
+		<RasterizerState FillMode="3" CullMode="3" FrontCounterClockwise="0" DepthBias="0" DepthBiasClamp="0" SlopeScaledDepthBias="0" DepthClipEnable="1" MultisampleEnable="0" AntialiasedLineEnable="0" ForcedSampleCount="0" ConservativeRaster="0" />
+		<DepthStencilState DepthEnable="0" DepthWriteMask="0" DepthFunc="0" StencilEnable="0" StencilReadMask="0" StencilWriteMask="0" FrontFaceStencilFailOp="0" FrontFace.StencilDepthFailOp="0" FrontFace.StencilPassOp="0" FrontFace.StencilFunc="0" BackFace.StencilFailOp="0" BackFace.StencilDepthFailOp="0" BackFace.StencilPassOp="0" BackFace.StencilFunc="0" />
+		<RTVFormats NumRenderTargets="1">
+			<RTVFormat Format="28" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+		</RTVFormats>
+		<DepthStencilState DepthEnable="0" DepthWriteMask="0" DepthFunc="0" StencilEnable="0" StencilReadMask="0" StencilWriteMask="0" FrontFaceStencilFailOp="0" FrontFace.StencilDepthFailOp="0" FrontFace.StencilPassOp="0" FrontFace.StencilFunc="0" BackFace.StencilFailOp="0" BackFace.StencilDepthFailOp="0" BackFace.StencilPassOp="0" BackFace.StencilFunc="0" DepthBoundsTestEnable="0" />
+	</PipelineStateObject>
+	<Rect GUID="{7EFD4C9C-4D86-4FA3-9C92-62D193D09171}" Name="MyScissorRect" Left="0" Top="0" Right="1280" Bottom="720" />
+	<RenderTargetView GUID="{67D3B98F-2C2C-47FF-927F-E3F8B866BFFD}" Name="MyRenderTargetView" DescriptorHeap="{F08175EA-B8C9-4074-9CF3-2BE272B9FB4E}" Resource="{1F7E3AF2-C09D-424D-A3FD-17A407BB0868}" Format="DXGI_FORMAT_UNKNOWN" ViewDimension="D3D12_RTV_DIMENSION_TEXTURE2D" MipSlice="0" PlaneSlice="0" />
+	<Resource GUID="{1F7E3AF2-C09D-424D-A3FD-17A407BB0868}" Name="MyRenderTextureResource" Dimension="3" Alignment="0" Width="1280" Height="720" DepthOrArraySize="1" MipLevels="1" Format="28" SampleCount="1" SampleQuality="0" Layout="0" Flags="1" HeapType="1" CPUPageProperty="0" MemoryPoolPreference="0" CreationNodeMask="0" VisibleNodeMask="0" ResourceClearValue="{FC235CB1-130A-44CB-B0FE-3D7C2F52C3D4}" HeapFlags="0" ResourceStates="128" />
+	<Resource GUID="{6D0E36D0-02AF-48CC-860A-CD099590AF26}" Name="MyVertexBufferResource" Dimension="1" Alignment="0" Width="84" Height="1" DepthOrArraySize="1" MipLevels="1" Format="0" SampleCount="1" SampleQuality="0" Layout="1" Flags="0" HeapType="2" CPUPageProperty="0" MemoryPoolPreference="0" CreationNodeMask="0" VisibleNodeMask="0" ResourceClearValue="NULL" HeapFlags="0" ResourceStates="2755" />
+	<ResourceBarrier GUID="{705AF28A-ADD6-4DD5-A891-94A500C2479F}" Name="MyPStoRTBarrier" Type="D3D12_RESOURCE_BARRIER_TYPE_TRANSITION" Flags="0" Resource="{1F7E3AF2-C09D-424D-A3FD-17A407BB0868}" StateBefore="128" StateAfter="4" Subresource="4294967295" />
+	<ResourceBarrier GUID="{4626245B-EE94-4844-9F6C-46EEEB4B7273}" Name="MyRTtoPSBarrier" Type="D3D12_RESOURCE_BARRIER_TYPE_TRANSITION" Flags="0" Resource="{1F7E3AF2-C09D-424D-A3FD-17A407BB0868}" StateBefore="4" StateAfter="128" Subresource="4294967295" />
+	<ResourceClearValue GUID="{FC235CB1-130A-44CB-B0FE-3D7C2F52C3D4}" Name="MyClearValue" Format="DXGI_FORMAT_R8G8B8A8_UNORM" R="0.39199999" G="0.583999991" B="0.92900002" A="1" />
+	<RootSignature GUID="{0E1E8D5D-ED10-42A0-BC34-063018B80D87}" Name="MyRootSignature" ParameterCount="0" SamplerCount="0" Flags="1" />
+	<Shader GUID="{6FEC0F0F-282B-4ECA-8595-3021DD8B120D}" Name="MyVertexShader" Stage="Vertex" EntryPoint="VSMain" ShaderModel="6_0" />
+	<Shader GUID="{42A2EBB1-1D27-4E4F-AFBF-72B10617941A}" Name="MyPixelShader" Stage="Pixel" EntryPoint="PSMain" ShaderModel="6_0" />
+	<VertexBufferView GUID="{9A4D8828-ACFD-4FD2-A7C3-E20C2E96273B}" Name="MyVertexBufferView" Resource="{6D0E36D0-02AF-48CC-860A-CD099590AF26}" StrideInBytes="28" SizeInBytes="84" />
+	<Viewport GUID="{B9362F66-CBE7-42AC-BC3B-F4CD8713991D}" Name="MyViewport" TopLeftX="0" TopLeftY="0" Width="1280" Height="720" MinDepth="0" MaxDepth="1" />
+	<Actions>
+		<CopyDataToResource GUID="{2758F8B9-1711-42EB-89BE-29DBA3F7A6C1}" Resource="{6D0E36D0-02AF-48CC-860A-CD099590AF26}" BufferData="{934F4F59-2122-46CB-B7E0-2A1587B87112}" ReadBegin="0" ReadEnd="0" />
+		<ResetCommandAllocator GUID="{A4F32BC6-D88D-46E0-BC7C-417086E09B27}" CommandAllocator="{50322B2F-8F4B-48F9-9C88-181755D59FB6}" />
+		<ResetCommandList GUID="{82939E40-4404-4FF4-A90E-EE9EE6843424}" CommandAllocator="{50322B2F-8F4B-48F9-9C88-181755D59FB6}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" PipelineStateObject="{51CB08DA-3CFD-47D9-AEEF-7B79A432E521}" />
+		<SetGraphicsRootSignature GUID="{D7B86873-0B76-4F22-B3EB-62C7C6ED8241}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" RootSignature="{0E1E8D5D-ED10-42A0-BC34-063018B80D87}" />
+		<RSSetViewports GUID="{F1A5FE8B-4E37-4057-A8C3-82423E1E3A0F}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" ViewportCount="1">
+			<Viewport GUID="{B9362F66-CBE7-42AC-BC3B-F4CD8713991D}" />
+		</RSSetViewports>
+		<RSSetScissorRects GUID="{EE55AB8E-5931-4CA7-B3C4-45C24B64D582}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" RectCount="1">
+			<Rect GUID="{7EFD4C9C-4D86-4FA3-9C92-62D193D09171}" />
+		</RSSetScissorRects>
+		<SetResourceBarriers GUID="{F9CAC51A-7BFC-4314-8FE6-CE6B9117A4BD}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" BarrierCount="1">
+			<ResourceBarrier GUID="{705AF28A-ADD6-4DD5-A891-94A500C2479F}" />
+		</SetResourceBarriers>
+		<OMSetRenderTargets GUID="{13C19CFE-FB95-4725-85AA-5EAEBFC3EA35}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" RTsSingleHandleToDescriptorRange="FALSE" DepthStencil="NULL" RenderTargetCount="1">
+			<RenderTarget GUID="{67D3B98F-2C2C-47FF-927F-E3F8B866BFFD}" />
+		</OMSetRenderTargets>
+		<ClearRenderTargetView GUID="{99C1C4BC-0FFC-44D3-9FC9-9FD7FA909CEC}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" RenderTargetView="{67D3B98F-2C2C-47FF-927F-E3F8B866BFFD}" R="0.39199999" G="0.583999991" B="0.92900002" A="1" RectCount="0" />
+		<IASetPrimitiveTopology GUID="{6EC06859-5D86-4468-9D62-6057664B9F18}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" Topology="4" />
+		<IASetVertexBuffers GUID="{FF4A4476-4968-4051-B2E0-E16D93685AF0}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" StartSlot="0" VertexBufferCount="1">
+			<VertexBuffer GUID="{9A4D8828-ACFD-4FD2-A7C3-E20C2E96273B}" />
+		</IASetVertexBuffers>
+		<DrawInstanced GUID="{79D2E15F-D65C-4722-AEA9-A4732C6DFAF4}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" VertexCountPerInstance="3" InstanceCount="1" StartVertexLocation="0" StartInstanceLocation="0" />
+		<SetResourceBarriers GUID="{33939260-6EE1-4AE8-87FB-24B386413035}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" BarrierCount="1">
+			<ResourceBarrier GUID="{4626245B-EE94-4844-9F6C-46EEEB4B7273}" />
+		</SetResourceBarriers>
+		<CloseCommandList GUID="{4A6EC895-4CCB-4BBD-8753-75A46EF5C9C6}" CommandList="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" />
+		<ExecuteCommandLists GUID="{9E6DFEB3-7C45-42AE-A58C-370A6C2FF5EC}" CommandQueue="{012540FE-34CF-4404-9991-56B07AD2826B}" CommandListCount="1">
+			<CommandList GUID="{02BA0888-ADCE-4131-A596-C9A96F3A7E61}" />
+		</ExecuteCommandLists>
+		<SignalAndWaitForever GUID="{17970870-71F1-47D0-8900-51E231BAE2DA}" Fence="{5AA5E8CF-DA13-4881-A3DB-FB8196826F13}" CommandQueue="{012540FE-34CF-4404-9991-56B07AD2826B}" />
+	</Actions>
+</PipelineProject>

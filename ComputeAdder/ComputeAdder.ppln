@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<PipelineProject Name="ComputeAdder">
+	<BufferData GUID="{D44FCFD6-E6E0-43C3-90EF-58B93AF527FE}" Name="InputBufferA">
+		<BufferDataField Type="Float3" Name="v1" />
+		<BufferDataField Type="Float2" Name="v2" />
+	</BufferData>
+	<BufferData GUID="{0719FFC0-AB8D-4485-8A14-3C563A9E36E8}" Name="InputBufferB">
+		<BufferDataField Type="Float3" Name="v1" />
+		<BufferDataField Type="Float2" Name="v2" />
+	</BufferData>
+	<BufferData GUID="{8003A7FD-7A3F-4E2B-8D71-0D0B072E1C94}" Name="OutputBufferData">
+		<BufferDataField Type="Float3" Name="v1" />
+		<BufferDataField Type="Float2" Name="v2" />
+	</BufferData>
+	<CommandAllocator GUID="{D4AE5858-395B-45E7-AB62-0CEE2282CEC6}" Name="MyCommandAllocator" AllocatorType="D3D12_COMMAND_LIST_TYPE_DIRECT" />
+	<CommandList GUID="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" Name="MyCommandList" CommandAllocator="{D4AE5858-395B-45E7-AB62-0CEE2282CEC6}" ListType="D3D12_COMMAND_LIST_TYPE_DIRECT" InitialPSO="NULL" />
+	<CommandQueue GUID="{C71C2DF2-631E-44A3-BF6C-AD95B0695BBB}" Name="MyCommandQueue" Flags="0" Type="D3D12_COMMAND_LIST_TYPE_DIRECT" Priority="0" />
+	<Fence GUID="{6DB8EFF9-FD03-489C-B92F-6B11FA716087}" Name="MyFence" InitialValue="1337" Flags="0" />
+	<PipelineStateObject GUID="{A7C26A1B-1B73-4726-B26F-87B799B2BCAE}" Name="MyPSO" UsesRootSignature="true" UsesRootSignature="true" UsesVS="false" UsesPS="false" UsesDS="false" UsesHS="false" UsesGS="false" UsesCS="true" UsesStreamOutput="false" UsesBlendState="false" UsesSampleMask="false" UsesRasterizerState="false" UsesDepthStencilState="false" UsesInputLayout="false" UsesIBStripCutValue="false" UsesPrimitiveTopologyType="false" UsesRTVFormats="false" UsesDSVFormat="false" UsesSampleDesc="false" UsesNodeMask="false" UsesCachedPSO="false" UsesFlags="false" UsesDepthStencilState1="false" UsesViewInstancing="false" UsesAS="false" UsesMS="false" RootSignature="{89262C12-6F42-48C5-B68B-2D85EDF26314}" VertexShader="NULL" PixelShader="NULL" DomainShader="NULL" HullShader="NULL" GeometryShader="NULL" ComputeShader="{51D97EC6-3682-4B63-9721-BD0D6394D865}" SampleMask="0" InputLayout="NULL" IBStripCutValue="0" PrimitiveTopologyType="0" DSVFormat="0" SampleCount="0" SampleQuality="0" NodeMask="0" Flags="0" AmplificationShader="NULL" MeshShader="NULL">
+		<BlendState AlphaToCoverageEnable="0" IndependentBlendEnable="0">
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+			<RenderTarget BlendEnable="0" LogicOpEnable="0" SrcBlend="0" DestBlend="0" BlendOp="0" SrcBlendAlpha="0" DestBlendAlpha="0" BlendOpAlpha="0" LogicOp="0" RenderTargetWriteMask="0" />
+		</BlendState>
+		<RasterizerState FillMode="0" CullMode="0" FrontCounterClockwise="0" DepthBias="0" DepthBiasClamp="0" SlopeScaledDepthBias="0" DepthClipEnable="0" MultisampleEnable="0" AntialiasedLineEnable="0" ForcedSampleCount="0" ConservativeRaster="0" />
+		<DepthStencilState DepthEnable="0" DepthWriteMask="0" DepthFunc="0" StencilEnable="0" StencilReadMask="0" StencilWriteMask="0" FrontFaceStencilFailOp="0" FrontFace.StencilDepthFailOp="0" FrontFace.StencilPassOp="0" FrontFace.StencilFunc="0" BackFace.StencilFailOp="0" BackFace.StencilDepthFailOp="0" BackFace.StencilPassOp="0" BackFace.StencilFunc="0" />
+		<RTVFormats NumRenderTargets="0">
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+			<RTVFormat Format="0" />
+		</RTVFormats>
+		<DepthStencilState DepthEnable="0" DepthWriteMask="0" DepthFunc="0" StencilEnable="0" StencilReadMask="0" StencilWriteMask="0" FrontFaceStencilFailOp="0" FrontFace.StencilDepthFailOp="0" FrontFace.StencilPassOp="0" FrontFace.StencilFunc="0" BackFace.StencilFailOp="0" BackFace.StencilDepthFailOp="0" BackFace.StencilPassOp="0" BackFace.StencilFunc="0" DepthBoundsTestEnable="0" />
+	</PipelineStateObject>
+	<Resource GUID="{4F2D30F1-0C5A-4F19-9A0D-E9A555100750}" Name="MyInputBufferAResource" Dimension="1" Alignment="0" Width="640" Height="1" DepthOrArraySize="1" MipLevels="1" Format="0" SampleCount="1" SampleQuality="0" Layout="1" Flags="0" HeapType="2" CPUPageProperty="0" MemoryPoolPreference="0" CreationNodeMask="0" VisibleNodeMask="0" ResourceClearValue="NULL" HeapFlags="0" ResourceStates="2755" />
+	<Resource GUID="{7D2AF68F-A9E8-401E-B0AB-274193BD3B45}" Name="MyInputBufferBResource" Dimension="1" Alignment="0" Width="640" Height="1" DepthOrArraySize="1" MipLevels="1" Format="0" SampleCount="1" SampleQuality="0" Layout="1" Flags="0" HeapType="2" CPUPageProperty="0" MemoryPoolPreference="0" CreationNodeMask="0" VisibleNodeMask="0" ResourceClearValue="NULL" HeapFlags="0" ResourceStates="2755" />
+	<Resource GUID="{C7F1B675-9139-491A-9AEB-F4E4B0BF0CB4}" Name="MyOutputBufferResource" Dimension="1" Alignment="0" Width="640" Height="1" DepthOrArraySize="1" MipLevels="1" Format="0" SampleCount="1" SampleQuality="0" Layout="1" Flags="4" HeapType="1" CPUPageProperty="0" MemoryPoolPreference="0" CreationNodeMask="0" VisibleNodeMask="0" ResourceClearValue="NULL" HeapFlags="0" ResourceStates="8" />
+	<Resource GUID="{CC1356EF-556B-41F4-A5A5-5556C4A76106}" Name="MyReadbackResource" Dimension="1" Alignment="0" Width="640" Height="1" DepthOrArraySize="1" MipLevels="1" Format="0" SampleCount="1" SampleQuality="0" Layout="1" Flags="0" HeapType="3" CPUPageProperty="0" MemoryPoolPreference="0" CreationNodeMask="0" VisibleNodeMask="0" ResourceClearValue="NULL" HeapFlags="0" ResourceStates="1024" />
+	<ResourceBarrier GUID="{FE28773A-4ADF-45BD-A36C-0F3084FFEAE8}" Name="MyUAVToCopySourceBarrier" Type="D3D12_RESOURCE_BARRIER_TYPE_TRANSITION" Flags="0" Resource="{C7F1B675-9139-491A-9AEB-F4E4B0BF0CB4}" StateBefore="8" StateAfter="2048" Subresource="4294967295" />
+	<ResourceBarrier GUID="{C052F819-EEA7-49BB-8866-ADEA4F19452A}" Name="MyCopySourceToUAVBarrier" Type="D3D12_RESOURCE_BARRIER_TYPE_TRANSITION" Flags="0" Resource="{C7F1B675-9139-491A-9AEB-F4E4B0BF0CB4}" StateBefore="2048" StateAfter="8" Subresource="4294967295" />
+	<RootSignature GUID="{89262C12-6F42-48C5-B68B-2D85EDF26314}" Name="MyRootSignature" ParameterCount="3" SamplerCount="0" Flags="0">
+		<RootParam ParameterType="D3D12_ROOT_PARAMETER_TYPE_SRV" ShaderRegister="0" RegisterSpace="0" ShaderVisibility="D3D12_SHADER_VISIBILITY_ALL" />
+		<RootParam ParameterType="D3D12_ROOT_PARAMETER_TYPE_SRV" ShaderRegister="1" RegisterSpace="0" ShaderVisibility="D3D12_SHADER_VISIBILITY_ALL" />
+		<RootParam ParameterType="D3D12_ROOT_PARAMETER_TYPE_UAV" ShaderRegister="0" RegisterSpace="0" ShaderVisibility="D3D12_SHADER_VISIBILITY_ALL" />
+	</RootSignature>
+	<Shader GUID="{51D97EC6-3682-4B63-9721-BD0D6394D865}" Name="MyComputeShader" Stage="Compute" EntryPoint="CSMain" ShaderModel="6_0" />
+	<Actions>
+		<CopyDataToResource GUID="{F5E56E6A-B066-4122-B500-CEB46A6A7B91}" Resource="{4F2D30F1-0C5A-4F19-9A0D-E9A555100750}" BufferData="{D44FCFD6-E6E0-43C3-90EF-58B93AF527FE}" ReadBegin="0" ReadEnd="0" />
+		<CopyDataToResource GUID="{DD07C00A-2077-4DEF-8362-7BB18427BB45}" Resource="{7D2AF68F-A9E8-401E-B0AB-274193BD3B45}" BufferData="{0719FFC0-AB8D-4485-8A14-3C563A9E36E8}" ReadBegin="0" ReadEnd="0" />
+		<ResetCommandAllocator GUID="{A180BDBE-3B81-4874-B4F2-ACFD5A17E05B}" CommandAllocator="{D4AE5858-395B-45E7-AB62-0CEE2282CEC6}" />
+		<ResetCommandList GUID="{C7B1373B-ED65-4AEA-A5FB-290DFB62E9C2}" CommandAllocator="{D4AE5858-395B-45E7-AB62-0CEE2282CEC6}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" PipelineStateObject="{A7C26A1B-1B73-4726-B26F-87B799B2BCAE}" />
+		<SetComputeRootSignature GUID="{0F773F84-811A-40F7-B469-F974143E765B}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" RootSignature="{89262C12-6F42-48C5-B68B-2D85EDF26314}" />
+		<SetComputeRootShaderResourceView GUID="{E189DED8-79E4-43BA-AA03-83EFD6F053C0}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" RootParamIndex="0" Resource="{4F2D30F1-0C5A-4F19-9A0D-E9A555100750}" />
+		<SetComputeRootShaderResourceView GUID="{3B6F7454-EA09-416A-B8F8-A7A9E21344E2}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" RootParamIndex="1" Resource="{7D2AF68F-A9E8-401E-B0AB-274193BD3B45}" />
+		<SetComputeRootUnorderedAccessView GUID="{786A588A-C39A-41D6-BA64-5A0DF1464D24}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" RootParamIndex="2" Resource="{C7F1B675-9139-491A-9AEB-F4E4B0BF0CB4}" />
+		<Dispatch GUID="{426EB5BF-CA67-4C98-95F8-5A55BCFAD38A}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" ThreadGroupCountX="1" ThreadGroupCountY="1" ThreadGroupCountZ="1" />
+		<SetResourceBarriers GUID="{040BE2E1-E42D-4A49-B430-9A1AD3C1577B}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" BarrierCount="1">
+			<ResourceBarrier GUID="{FE28773A-4ADF-45BD-A36C-0F3084FFEAE8}" />
+		</SetResourceBarriers>
+		<CopyResource GUID="{F06A50C0-FFD4-429A-9AB6-4908EC3BB09C}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" DestinationResource="{CC1356EF-556B-41F4-A5A5-5556C4A76106}" SourceResource="{C7F1B675-9139-491A-9AEB-F4E4B0BF0CB4}" />
+		<SetResourceBarriers GUID="{7A3D4442-C76F-4A2E-B73E-4C3868450122}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" BarrierCount="1">
+			<ResourceBarrier GUID="{C052F819-EEA7-49BB-8866-ADEA4F19452A}" />
+		</SetResourceBarriers>
+		<CloseCommandList GUID="{18760295-3244-416B-8A71-C44BBBD787B0}" CommandList="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" />
+		<ExecuteCommandLists GUID="{632CCFCE-1863-4BE3-9DF6-F839D722C34F}" CommandQueue="{C71C2DF2-631E-44A3-BF6C-AD95B0695BBB}" CommandListCount="1">
+			<CommandList GUID="{2CF91C53-0AEA-4E3C-BC44-E134334A7916}" />
+		</ExecuteCommandLists>
+		<SignalAndWaitForever GUID="{8C8ABBB7-F072-45D5-9CD5-4A7405FA42B9}" Fence="{6DB8EFF9-FD03-489C-B92F-6B11FA716087}" CommandQueue="{C71C2DF2-631E-44A3-BF6C-AD95B0695BBB}" />
+		<CopyResourceToDataBuffer GUID="{CE873EBD-79D0-48E4-90EB-0B1832B51957}" Resource="{CC1356EF-556B-41F4-A5A5-5556C4A76106}" BufferData="{8003A7FD-7A3F-4E2B-8D71-0D0B072E1C94}" ReadBegin="0" ReadEnd="0" />
+	</Actions>
+</PipelineProject>
