@@ -1,5 +1,5 @@
 # Pipeline Samples
-Sample projects for [Pipeline](http://pipeline.graphics/)
+Sample projects for [Pipeline](http://pipeline.graphics/), which is a data-driven, interactive, runtime editor of the entire DirectX 12 pipeline.
 
 ### ComputeAdder
 
