@@ -30,3 +30,7 @@ Based on [HelloTriangle](https://github.com/microsoft/DirectX-Graphics-Samples/t
 A screenspace quad mesh that applies a Sobel edge detection pixel shader to a texture.
 
 Based on [EdgeDetectPixelShader.hlsl](https://github.com/microsoft/DirectX-Graphics-Samples/blob/master/Samples/Desktop/D3D12PipelineStateCache/src/EdgeDetectPixelShader.hlsl)
+
+### SpinningCube
+
+A single unit cube spinning around the Y axis. This demonstrates setting up World, View, & Projection matrices entirely in HLSL.
