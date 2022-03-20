@@ -45,6 +45,6 @@ Based on [EdgeDetectPixelShader.hlsl](https://github.com/microsoft/DirectX-Graph
 
 ### SpinningCube
 
-![](/SpinningCube/SpinningCube.png)
-
 A single unit cube spinning around the Y axis. This demonstrates setting up World, View, & Projection matrices entirely in HLSL.
+
+![](/SpinningCube/SpinningCube.png)
