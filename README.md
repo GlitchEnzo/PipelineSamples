@@ -15,6 +15,12 @@ A single triangle that uses a constant buffer with time to move from the left of
 
 Based on [HelloConstBuffers](https://github.com/microsoft/DirectX-Graphics-Samples/tree/master/Samples/Desktop/D3D12HelloWorld/src/HelloConstBuffers)
 
+### OrbitCamera
+
+A project that uses time, mouse, & keyboard input in a buffer updated in a compute shader to update the World, View, & Projection matrices to rotate and zoom around a cube mesh.
+
+![](/OrbitCamera/OrbitCamera.png)
+
 ### ScreenspaceCheckerboard
 
 A screenspace quad mesh that renders out a checkerboard pattern using a pixel shader.
